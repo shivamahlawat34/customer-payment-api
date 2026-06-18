@@ -9,26 +9,14 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
 
-  Route::get(
-    '/customers',
-    [CustomerController::class, 'index']
-  );
+  Route::get('/customers', [CustomerController::class, 'index']);
 
-  Route::put(
-    '/customer/{id}/payment-status',
-    [CustomerController::class, 'updatePaymentStatus']
-  );
+  Route::put('/customer/{id}/payment-status', [CustomerController::class, 'updatePaymentStatus']);
 
-  Route::post(
-    '/customer/{id}/send-notification',
-    [CustomerController::class, 'sendNotification']
-  );
+  Route::post('/customer/{id}/send-notification', [CustomerController::class, 'sendNotification']);
 
   Route::middleware('admin')->group(function () {
 
-    Route::post(
-      '/admin/upload-csv',
-      [AdminController::class, 'uploadCsv']
-    );
+    Route::post('/admin/upload-csv', [AdminController::class, 'uploadCsv']);
   });
 });
