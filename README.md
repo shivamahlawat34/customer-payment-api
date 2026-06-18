@@ -34,6 +34,12 @@ php artisan db:seed
 
 php artisan serve
 
+## Postman Collection
+
+The Postman collection required for testing all APIs is included in this repository.
+
+Location: /postman/customer-payment-api.postman_collection.json
+
 ## Test Credentials
 
 Admin:
